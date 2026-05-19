@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import './pages/home/home_page.dart';
+import 'package:marketplace_mobile_app/auth/auth_controller.dart';
+import 'package:marketplace_mobile_app/router/app_router.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AuthController.instance.init();
   runApp(const MyApp());
 }
 
@@ -10,13 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp.router(
+      title: 'AI购物中心',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      // 修复：添加构造函数括号，并使用正确的类名
-      home: const HomePage(),
+      routerConfig: AppRouter.router,
     );
   }
 }

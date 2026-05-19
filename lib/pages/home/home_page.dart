@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:marketplace_mobile_app/router/app_router.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  // 必须实现的方法：创建对应的State对象
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-// 真正的状态和UI逻辑写在这个State类中
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('AI购物中心')),
-      body: const Center(child: Text('欢迎使用flutter')),
-    ); // 这里添加了分号
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const Text(
+              '欢迎使用 flutter',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 16),
+            FilledButton.icon(
+              onPressed: () => context.go(AppRoutes.mine),
+              icon: const Icon(Icons.person_outline),
+              label: const Text('去我的页面'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
