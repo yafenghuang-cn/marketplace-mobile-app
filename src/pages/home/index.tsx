@@ -1,28 +1,50 @@
-import { useNavigation } from '@react-navigation/native';
-import React from 'react';
-import { Text, View } from 'react-native';
+import { useEffect } from 'react';
 
-import CustomButton from '~/components/CustomButton';
+import MineTabs from '~/app/MineTabs';
+import AboutPage from '~/pages/about';
+import DebugPage from '~/pages/debug';
+import LoginPage from '~/pages/login';
+import MinePage from '~/pages/mine';
+
+import type React from 'react';
 
 const Home: React.FC = () => {
-  const navigation = useNavigation();
-  return (
-    <View>
-      <CustomButton
-        title='去调试页面'
-        onPress={() => {
-          navigation.navigate('debug' as never);
-        }}
-      />
-      <Text>Home</Text>
-      <CustomButton
-        title='去登录'
-        onPress={() => {
-          navigation.navigate('login' as never);
-        }}
-      />
-    </View>
-  );
+  useEffect(() => {
+    console.log('获取底部导航栏配置');
+  }, []);
+
+  const tabList = [
+    {
+      name: 'login',
+      component: LoginPage,
+      options: {
+        title: '登录',
+      },
+    },
+    {
+      name: 'about',
+      component: AboutPage,
+      options: {
+        title: '关于',
+      },
+    },
+    {
+      name: 'debug',
+      component: DebugPage,
+      options: {
+        title: '调试',
+      },
+    },
+    {
+      name: 'mine',
+      component: MinePage,
+      options: {
+        title: '我的',
+      },
+    },
+  ];
+
+  return <MineTabs initialRouteName='mine' tabList={tabList} />;
 };
 
 export default Home;

@@ -9,49 +9,49 @@ const routers = [
   {
     name: 'home',
     component: Home,
-    showHeader: true,
     options: {
       title: '首页',
+      headerShown: false,
     },
   },
   {
     name: 'login',
     component: Login,
-    showHeader: true,
     options: {
       title: '登录',
+      headerShown: false,
     },
   },
   {
     name: 'register',
     component: Register,
-    showHeader: true,
     options: {
       title: '注册',
+      headerShown: false,
     },
   },
   {
     name: 'debug',
     component: Debug,
-    showHeader: true,
     options: {
       title: '调试',
+      headerShown: false,
     },
   },
   {
     name: 'about',
     component: About,
-    showHeader: true,
     options: {
       title: '关于',
+      headerShown: false,
     },
   },
   {
     name: 'mine',
     component: Mine,
-    showHeader: true,
     options: {
       title: '我的',
+      headerShown: false,
     },
   },
 ];

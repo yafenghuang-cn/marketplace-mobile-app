@@ -25,7 +25,7 @@ const config = {
     port: 8081, // 您可以修改这里的端口号为任何您想要的值
   },
   resolver: {
-    sourceExts: ['js', 'ts', 'tsx', 'svg', 'json'],
+    sourceExts: ['js', 'ts', 'tsx', 'svg', 'json', 'png', 'jpg'],
     extraNodeModules: {
       ...extraNodeModules,
       'react-native-url-polyfill': require.resolve('react-native-url-polyfill'),

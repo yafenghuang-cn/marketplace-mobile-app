@@ -128,7 +128,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
 
     // 代码风格规则
-    'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+    // 'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
     'no-unused-vars': 'off', // 使用 @typescript-eslint/no-unused-vars 代替
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-constant-condition': ['error', { checkLoops: false }],
