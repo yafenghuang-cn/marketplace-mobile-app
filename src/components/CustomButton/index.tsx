@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1, // 阴影透明度
     shadowRadius: 4, // 阴影圆角
     elevation: 3, // 安卓阴影层级
+    width: '100%',
   },
   // 禁用状态容器样式
   disabledButton: {

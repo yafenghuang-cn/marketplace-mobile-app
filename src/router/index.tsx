@@ -5,7 +5,9 @@ import Login from '~/pages/login';
 import Mine from '~/pages/mine';
 import Register from '~/pages/register';
 
-const routers = [
+import InlineSkateModuleRouter from './InlineSkateModule-router';
+
+const baseRouters = [
   {
     name: 'home',
     component: Home,
@@ -55,5 +57,7 @@ const routers = [
     },
   },
 ];
+
+const routers = [...baseRouters, ...InlineSkateModuleRouter];
 
 export default routers;
