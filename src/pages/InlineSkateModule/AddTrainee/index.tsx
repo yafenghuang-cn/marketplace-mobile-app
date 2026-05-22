@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import colors from '~/common/colors';
-import CustomButton from '~/components/CustomButton';
+import { Button } from '~/components/Button';
 
 // 1. 统一定义数据类型，复用类型，提升代码可维护性
 interface TraineeFormItem {
@@ -89,8 +89,8 @@ const AddTrainee: React.FC = () => {
       </View>
 
       <View style={styles.bottomContainer}>
-        <CustomButton style={styles.bottomButtonItem} title='保存' onPress={handleSubmit} />
-        <CustomButton style={styles.bottomButtonItem} title='重置' onPress={handleReset} />
+        <Button style={styles.bottomButtonItem} title='保存' onPress={handleSubmit} />
+        <Button style={styles.bottomButtonItem} title='重置' onPress={handleReset} />
       </View>
     </KeyboardAvoidingView>
   );
