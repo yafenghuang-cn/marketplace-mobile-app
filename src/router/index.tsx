@@ -6,6 +6,7 @@ import Mine from '~/pages/mine';
 import Register from '~/pages/register';
 
 import InlineSkateModuleRouter from './InlineSkateModule-router';
+import WarehouseModuleRouter from './WarehouseModule-router';
 
 const baseRouters = [
   {
@@ -58,6 +59,6 @@ const baseRouters = [
   },
 ];
 
-const routers = [...baseRouters, ...InlineSkateModuleRouter];
+const routers = [...baseRouters, ...InlineSkateModuleRouter, ...WarehouseModuleRouter];
 
 export default routers;

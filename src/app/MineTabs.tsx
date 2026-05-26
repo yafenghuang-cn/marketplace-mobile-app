@@ -2,8 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { useMemo } from 'react';
 import { Animated, Image, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 
-import mineIcon from '~/assets/images/ic_mine.png';
-import mineIconActive from '~/assets/images/ic_mine_active.png';
+import mineIconActive from '~/assets/tabs/mine-active.png';
+import mineIcon from '~/assets/tabs/mine.png';
 
 import type { BottomTabBarButtonProps } from '@react-navigation/bottom-tabs';
 // import type { GestureResponderEvent } from 'react-native';
